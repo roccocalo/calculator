@@ -1,0 +1,91 @@
+body {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    caret-color: transparent;
+    margin: 0px;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    
+}
+
+.calculator-bone {
+    height: 570px;
+    width: 380px;
+    background-color: #205b7a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.textfield {
+    width: 287px;
+    height: 40px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom : 20px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #a2bbcf;
+    
+}
+
+.clear-deleteBtn {
+display: flex;
+    gap: 10px;
+}
+
+.clear-deleteBtn button {
+width: 170px;
+height: 40px;
+
+}
+
+.realBtn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 300px;
+    gap: 3px;
+    margin-top: 20px;
+}
+
+.realBtn button {
+    width: 85px;
+    height: 85px;
+    
+}
+
+button {
+    font-size: x-large;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #a2bbcf;
+}
+
+button:hover {
+    background-color: #5a7caf;
+    transform: translateY(-0.05em);
+}
+button:active {transform: translateY(0em);}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto ;
+    gap: 8px;
+    color: #205b7a;;
+}
+
+.footer img {
+    height: 20px;
+}

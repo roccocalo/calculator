@@ -3,7 +3,6 @@ let decimalCount = 0;
 let valueOne = 0;
 let valueTwo = "";
 let result = "";
-let operator = "";
 let temp = "";
 
 
@@ -64,9 +63,19 @@ function operate() {
     } else if (textbox.value.indexOf("-") !== -1) {
         if (valueOne.toString().includes("-")) {
             temp = textbox.value.substring(textbox.value.indexOf('-') + 1);
+            
+            //operations with negative number 
             if (temp.toString().includes("-")) {
                 valueTwo = parseFloat(temp.substring(temp.indexOf('-') + 1));
                 result = valueOne - valueTwo;
+            }   
+            else if (temp.toString().includes("*")) {
+                valueTwo = parseFloat(temp.substring(temp.indexOf('*') + 1));
+                result = valueOne * valueTwo;
+            }   
+            else if (temp.toString().includes("/")) {
+                valueTwo = parseFloat(temp.substring(temp.indexOf('/') + 1));
+                result = valueOne / valueTwo;
             }   
         }
         else {
@@ -79,7 +88,7 @@ function operate() {
     } else if (textbox.value.indexOf("/") !== -1) {
         valueTwo = parseFloat(textbox.value.substring(textbox.value.indexOf('/') + 1));
         if (valueTwo === 0) {
-            result = "You can't divide by zero, fool!"
+            result = "You can't divide by zero!"
         } else {
             result = Math.round((valueOne / valueTwo) * 100) / 100;
         }
